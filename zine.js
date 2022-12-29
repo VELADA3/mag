@@ -209,13 +209,25 @@ const drag = function(canDrag){
 
 //HIDE BUTTON ARRAY
 	function hideButtons(){
-		if(!hidden){
-			$(buttons).animate({left: '-=70px'}, "slow");
-			hidden = true;
+		if (window.innerHeight > window.innerWidth) {
+			if(!hidden){
+				$(buttons).animate({left: '-=350px'}, "slow");
+				hidden = true;
+			}
+			else if(hidden){
+				$(buttons).animate({left: '+=350px'}, "slow");
+				hidden = false;
+			}
 		}
-		else if(hidden){
-			$(buttons).animate({left: '+=70px'}, "slow");
-			hidden = false;
+		else{
+			if(!hidden){
+				$(buttons).animate({left: '-=50px'}, "slow");
+				hidden = true;
+			}
+			else if(hidden){
+				$(buttons).animate({left: '+=50px'}, "slow");
+				hidden = false;
+			}
 		}
 	}
 	

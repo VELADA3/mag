@@ -105,10 +105,10 @@ a:hover{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	position: absolute;
-	height: 100%;
-	margin-left: 100%;
-	width: 30px;
+	position: fixed;
+	height: 50px;
+	width: 50px;
+	margin-left: 110%;
 	background-color: rgba(0,0,0,0.0);
 	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.0);
 	color: #2d2a2b;
@@ -174,7 +174,7 @@ button:active{
 
 @media only screen and (min-width:601px) and (max-width: 900px) {
 	body{
-		background-size: auto 110vw;
+		background-size: auto 110vh;
 	}
 	
 	.bounds{
@@ -191,6 +191,13 @@ button:active{
 	.zine .page{
 		width: 63.61vh;
 		height: 90vh;
+	}
+	
+	.buttons{
+		flex-direction: row;
+		grid-column-gap: 2vh;
+		top: auto;
+		bottom: 0%;
 	}
 
 }
@@ -215,5 +222,11 @@ button:active{
 		width: 95vw;
 		height: 134.1vw;
 	}
-
+	
+	.buttons{
+		flex-direction: row;
+		grid-column-gap: 2vh;
+		top: auto;
+		bottom: 0%;
+	}
 }
