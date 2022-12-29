@@ -224,7 +224,7 @@ const drag = function(canDrag){
 		book.style.width = '';
 		book.style.height = '';
 		$(book).turn('size', book.clientWidth, book.clientHeight);
-		location.reload();
+		//location.reload();
 	});
 	
 
