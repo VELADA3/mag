@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>Velada's Magazine</title>
+	<link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+	<link rel="stylesheet" href="ZineCSS.css">	
+	<script
+			  src="https://code.jquery.com/jquery-3.6.0.js"
+			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			  crossorigin="anonymous">
+	</script>
+	<script src="turn.js"></script>
+	
+	<link rel="stylesheet" href="https://use.typekit.net/nbc3wbt.css">
+		
+</head>
+
+<body id="body">
+	<div id="loading"><div class="loader"></div></div> <!--LOADING COMMENT...-->
+    <div class="popup">
+        <h1>SPECIAL THANKS</h1>
+		<p>
+			<strong>LINE ART &amp; STORY</strong><br><sub>
+			<a href="https://twitter.com/lamightexist" target="_blank">
+				@LaMightExist
+			</a></sub><br>
+		</p>
+		<h1>MAGAZINE INFO</h1>
+		<p>
+			<strong>PAGE CORNERS</strong><br><sub>turn pages</sub><br><br>
+			<strong>FLASHLIGHT</strong><br><sub>view secrets</sub><br><br>
+			<strong>DOUBLE CLICK</strong><br><sub>quick zoom</sub><br><br>
+			<strong>CLICK &amp; DRAG</strong><br><sub>scroll around</sub><br><br>
+			<strong>+ / -</strong><br><sub>pinpoint zoom</sub><br><br>
+			<strong>SCREEN</strong><br><sub>recenter view</sub><br><br>
+        </p>
+		
+		<button type="button" id="closePop" onclick="giveInfo()">✖️</button>
+    </div>
+
+	<div class="buttons" id="buttons">
+		<button type="button" id="light">🔦</button>
+		<button type="button" id="zoom-in">➕</button>
+		<button type="button" id="zoom-norm">💻</button>
+		<button type="button" id="zoom-out">➖</button>
+		<button type="button" id="info">❔</button>
+		<button type="button" id="hide">⋮</button>
+	</div>
+
+	<div class="bounds" id="bounds">
+	  <div class="zine" id="zine">
+			<div class="page"><img id="pg1" src="images/01.png" draggable="false" alt=""></div>
+			<div class="page"><img id="pg2" src="images/02.png" draggable="false" alt=""></div>
+			<div class="page"><img id="pg3" src="images/03.png" draggable="false" alt=""></div>
+			<div class="page"><img id="pg4" src="images/04.png" draggable="false" alt=""></div>
+		    <div class="page"><img id="pg5" src="images/05.png" draggable="false" alt=""></div>
+		    <div class="page"><img id="pg6" src="images/06.png" draggable="false" alt=""></div>
+		    <div class="page"><img id="pg7" src="images/07.png" draggable="false" alt=""></div>
+		    <div class="page"><img id="pg8" src="images/08.png" draggable="false" alt=""></div>
+		  	<div class="page"><img id="pg9" src="images/09.png" draggable="false" alt=""></div>
+		  	<div class="page"><img id="pg10" src="images/010.png" draggable="false" alt=""></div>
+	  </div>
+	</div>
+	
+<script src="zine.js"></script>
+	
+</body>
+</html>
