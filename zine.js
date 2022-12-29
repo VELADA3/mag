@@ -26,18 +26,29 @@
 	var hide  = document.getElementById('hide');
 
 /*EVENT LISTENERS-------------------------------------------*/	
-	zoomOut.addEventListener("click", zOut);
-	zoomIn.addEventListener("click", zIn);
-	zoomNorm.addEventListener("click", zNorm);
 	light.addEventListener("click", lightToggle);
 	info.addEventListener("click", giveInfo);
 	hide.addEventListener("click", hideButtons);
-	bounds.addEventListener("dblclick", zoomFrame);
+	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || screen.innerHeight > screen.innerWidth) {
+		$(zoomOut).css("display", "none");
+		$(zoomIn).css("display", "none");
+		$(zoomNorm).css("display", "none");
+		$('#pcCont').css("display", "none");
+	}
+	else{
+		bounds.addEventListener("dblclick", zoomFrame);
+		zoomOut.addEventListener("click", zOut);
+		zoomIn.addEventListener("click", zIn);
+		zoomNorm.addEventListener("click", zNorm);
+	}
+
+	window.addEventListener("orientationchange", function() {location.reload();});
 
 /*PAGE CONDITIONS-------------------------------------------*/
 window.addEventListener('DOMContentLoaded', function(){
 	giveInfo();
 	spd = 350;
+	preload();
 });
 
 window.addEventListener("load", function(){
@@ -93,6 +104,15 @@ const drag = function(canDrag){
 }
 
 /*FUNCTIONS-------------------------------------------*/
+function preload() {
+	var imageArray = ["01A", "02A", "03A", "04A", "05A", "06A", "07A", "08A", "09A", "010A"];
+
+	for (var i = 0; i < imageArray.length; i++) {
+		var tempImage = new Image();
+		tempImage.src = "./images/"+imageArray[i]+".png";
+	}
+}
+
 //DOUBLE CLICK & ZOOM
 	function zoomFrame(){
 		if(!dcToggle){
