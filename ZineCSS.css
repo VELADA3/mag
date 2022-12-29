@@ -108,7 +108,7 @@ a:hover{
 	position: fixed;
 	height: 50px;
 	width: 50px;
-	margin-left: 110%;
+	left: 115%;
 	background-color: rgba(0,0,0,0.0);
 	box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.0);
 	color: #2d2a2b;
